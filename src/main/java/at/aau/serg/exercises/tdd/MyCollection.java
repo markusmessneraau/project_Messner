@@ -1,5 +1,7 @@
 package at.aau.serg.exercises.tdd;
 
+import java.util.ArrayList;
+
 public class MyCollection {
     private String[] list;
     private int cursor=0;
@@ -31,6 +33,38 @@ public class MyCollection {
      * @param s String to remove
      */
     public void remove(String s) throws IllegalArgumentException{
+
+        ArrayList<String> a = new ArrayList<>();
+
+        String [] b = new String[list.length-1];
+
+        for (int i = 0; i < list.length-1; i++) {
+            a.add(list[i]);
+        }
+
+
+
+        if(a.contains(s)){
+
+            a.remove(s);
+
+
+        }else{
+
+            throw new IllegalArgumentException("Value not in the collection");
+        }
+
+        for (int i = 0; i < a.size()-1; i++) {
+
+            b[i] = a.get(i);
+
+        }
+
+
+        list = b;
+
+
+
 
     }
 
