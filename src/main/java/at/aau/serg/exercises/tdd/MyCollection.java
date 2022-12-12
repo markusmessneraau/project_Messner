@@ -41,4 +41,9 @@ public class MyCollection {
 
     }
 
+    public String getElement (int x){
+
+        return list[x];
+    }
+
 }
