@@ -61,4 +61,48 @@ public class MyCollectionTest {
         });
     }
 
+
+    @Test
+    public void testEmpty(){
+
+        MyCollection x = new MyCollection(4);
+
+        ArrayList<String> a = new ArrayList<>();
+
+
+
+        x.add("VW");
+        x.add("BMX");
+        x.add("Audi");
+        x.add("Fiat");
+
+        x.empty();
+
+        for (int  i = 0;  i < x.size()-1;  i++) {
+
+            a.add(x.getElement(i));
+
+        }
+
+        boolean z;
+
+        for (int i = 0; i < a.size(); i++) {
+
+            if(a.get(i) == null){
+
+                 z = true;
+            }else{
+
+                 z = false;
+            }
+
+            Assertions.assertTrue(z);
+
+
+        }
+
+
+
+    }
+
 }

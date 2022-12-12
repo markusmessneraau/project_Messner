@@ -80,4 +80,22 @@ public class MyCollection {
         return list[x];
     }
 
+    public static boolean chekIfNull (ArrayList<String> a){
+
+        boolean x = true;
+
+
+        for (int i = 0; i < a.size()-1; i++) {
+
+            if(a.get(i)!= null){
+
+                x = false;
+                break;
+            }
+
+        }
+
+        return x;
+    }
+
 }
